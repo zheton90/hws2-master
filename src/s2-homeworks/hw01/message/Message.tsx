@@ -1,6 +1,7 @@
 import React from 'react'
 import s from './Message.module.css'
 import {MessageType} from "../HW1";
+import BgMsg from './BgMsg1.png';
 
 // нужно создать правильный тип вместо any
 export type MessagePropsType = {
