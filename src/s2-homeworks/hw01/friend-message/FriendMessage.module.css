@@ -21,8 +21,8 @@
 .friendText {
     color: #000000;
     background-image: url("BgMsg2.png");
-    background-size: cover;
-    padding: 8px 13px 8px 26px;
+
+    /*padding: 8px 13px 8px 26px;*/
 }
 
 .friendText:after {
@@ -30,14 +30,12 @@
 }
 
 .friendName {
-    font-family: Montserrat;
+    font-family: "Montserrat";
     font-weight: 600;
     font-size: 18px;
     line-height: 100%;
     letter-spacing: 0;
-    /*padding: 8px 26px 4px 13px;*/
-
-}
+    }
 
 .friendMessageText {
     font-family: Montserrat;
@@ -45,7 +43,7 @@
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0;
-    padding: 0 26px 8px 13px;
+
 }
 
 .friendTime {

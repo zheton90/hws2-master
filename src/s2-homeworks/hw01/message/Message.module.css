@@ -21,8 +21,13 @@
 .text {
     color: #FFFFFF;
     background-image: url("BgMsg1.png");
-    background-size: cover;
-    padding: 20px 13px 20px 26px;
+    background-size: 100%;
+
+}
+
+.group {
+    padding: 8px 25px 8px 13px;
+
 }
 
 .text:after {
@@ -30,7 +35,7 @@
 }
 
 .name {
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-weight: 600;
     font-size: 18px;
     line-height: 100%;
@@ -44,6 +49,7 @@
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0;
+
 }
 
 .time {

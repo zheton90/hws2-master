@@ -23,11 +23,11 @@ function Affairs(props: AffairsPropsType) {
     const setLow = () => {
         props.setFilter('low')
     }
-
-    const cnAll = s.button + ' ' + s.all + (props.filter === 'all' ? ' ' + s.active : '')
-    const cnHigh = s.button + ' ' + s.high + (props.filter === 'high' ? ' ' + s.active : '')
-    const cnMiddle = s.button + ' ' + s.middle + (props.filter === 'middle' ? ' ' + s.active : '')
-    const cnLow = s.button + ' ' + s.low + (props.filter === 'low' ? ' ' + s.active : '')
+    //
+    // const cnAll = s.button + ' ' + s.all + (props.filter === 'all' ? ' ' + s.active : '')
+    // const cnHigh = s.button + ' ' + s.high + (props.filter === 'high' ? ' ' + s.active : '')
+    // const cnMiddle = s.button + ' ' + s.middle + (props.filter === 'middle' ? ' ' + s.active : '')
+    // const cnLow = s.button + ' ' + s.low + (props.filter === 'low' ? ' ' + s.active : '')
 
     const mappedAffairs = props.data.map((a: AffairType) => (
         <Affair
@@ -43,28 +43,28 @@ function Affairs(props: AffairsPropsType) {
                 <button
                     id={'hw2-button-all'}
                     onClick={setAll}
-                    className={cnAll}
+                    // className={cnAll}
                 >
                     All
                 </button>
                 <button
                     id={'hw2-button-high'}
                     onClick={setHigh}
-                    className={cnHigh}
+                    // className={cnHigh}
                 >
                     High
                 </button>
                 <button
                     id={'hw2-button-middle'}
                     onClick={setMiddle}
-                    className={cnMiddle}
+                    // className={cnMiddle}
                 >
                     Middle
                 </button>
                 <button
                     id={'hw2-button-low'}
                     onClick={setLow}
-                    className={cnLow}
+                    // className={cnLow}
                 >
                     Low
                 </button>
