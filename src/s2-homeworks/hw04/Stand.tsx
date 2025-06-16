@@ -10,10 +10,13 @@ const Stand = () => {
 
     const [stateForAllCheckboxes, setChecked] = useState<boolean>(false)
 
+    console.log(stateForAllInputs)
+
     return (
         <div id={'hw4-stand'} className={s.stand}>
             <div className={s.inputs}>
                 {/*совместим со старым кодом:*/}
+
                 <div>
                     <SuperInputText
                         id={'hw4-super-input-like-old'}
@@ -57,8 +60,8 @@ const Stand = () => {
                 <div>
                     <SuperButton
                         id={'hw4-super-button-disabled'}
-                        xType={'red'}
-                        disabled
+                        xType={'disabled'}
+                        disabled={true}
                     >
                         disabled
                     </SuperButton>
