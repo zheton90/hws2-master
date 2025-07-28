@@ -13,7 +13,7 @@ import s from './HW7.module.css'
 
 const arr = [
     { id: 1, value: 'Pre-junior' },
-    { id: 2, value:  'Junior'},
+    { id: 2, value: 'Junior'},
     { id: 3, value: 'Junior +' },
 ] // value может быть изменено
 
