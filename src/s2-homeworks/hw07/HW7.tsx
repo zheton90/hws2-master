@@ -12,8 +12,8 @@ import s from './HW7.module.css'
 * */
 
 const arr = [
-    { id: 1, value: 'Junior' },
-    { id: 2, value: 'Pre-junior' },
+    { id: 1, value: 'Pre-junior' },
+    { id: 2, value:  'Junior'},
     { id: 3, value: 'Junior +' },
 ] // value может быть изменено
 
@@ -23,7 +23,7 @@ export type optionType = {
 }
 
 const HW7 = () => {
-    const [value, onChangeOption] = useState(2) // селект и радио должны работать синхронно
+    const [value, onChangeOption] = useState(1) // селект и радио должны работать синхронно
 
     return (
         <div id={'hw7'}>
