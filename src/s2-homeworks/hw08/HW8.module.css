@@ -1,23 +1,43 @@
 .item {
+    height: 48px;
+    border: solid 1px #E5E5E5;
 }
 
 .item:last-of-type {
 }
 
 .users {
+    width: 100%;
 }
 
 .buttonsContainer {
+    display: flex;
+    justify-content: end;
+    column-gap: 12px;
 }
 
 .container {
+    width: 606px;
+    /*outline:1px solid red;*/
+    /*background-color: #FFFFFF;*/
 }
 
 .thead {
+    width: 100%;
 }
 
 .nameCol {
+    width: 50%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #000;
 }
 
 .ageCol {
+    width: 50%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #000;
 }
