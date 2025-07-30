@@ -1,6 +1,8 @@
 .select {
     width: 180px;
     height: 25px;
+    border: 1px solid #C2C2C2;
+    border-radius: 2px;
 }
 
 .select:focus {
