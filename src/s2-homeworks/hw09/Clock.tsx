@@ -13,8 +13,6 @@ function Clock() {
 
         setTimerId(+setInterval(()=>{setDate(new Date(saveState('hw9-date', Date.now())))},1000))
 
-
-
         // пишут студенты // запустить часы (должно отображаться реальное время, а не +1)
         // сохранить ид таймера (https://learn.javascript.ru/settimeout-setinterval#setinterval)
 
@@ -48,7 +46,7 @@ function Clock() {
         //formatter.format(date.getDay())
 
     //'date->time' || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
-    const stringDate = date.toLocaleString('en-US', {
+    const stringDate = date.toLocaleString('ru', {
         dateStyle: "short",
 
     })
@@ -66,8 +64,7 @@ function Clock() {
         month: 'long',
     })
 
-
-        //'date->month' || <br/> // пишут студенты
+            //'date->month' || <br/> // пишут студенты
 
     return (
         <div className={s.clock}>
@@ -101,14 +98,14 @@ function Clock() {
             <div className={s.buttonsContainer}>
                 <SuperButton
                     id={'hw9-button-start'}
-                    disabled={false} // пишут студенты // задизэйблить если таймер запущен
+                    disabled={timerId !== undefined} // пишут студенты // задизэйблить если таймер запущен
                     onClick={start}
                 >
                     start
                 </SuperButton>
                 <SuperButton
                     id={'hw9-button-stop'}
-                    disabled={false} // пишут студенты // задизэйблить если таймер не запущен
+                    disabled={timerId === undefined} // пишут студенты // задизэйблить если таймер не запущен
                     onClick={stop}
                 >
                     stop
