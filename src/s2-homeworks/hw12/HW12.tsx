@@ -3,6 +3,8 @@ import s from './HW12.module.css'
 import s2 from '../../s1-main/App.module.css'
 import SuperSelect from '../hw07/common/c5-SuperSelect/SuperSelect'
 import {changeThemeId, themeReducer} from './bll/themeReducer'
+import {useDispatch, useSelector} from "react-redux";
+import {RootState} from "../hw10/bll/store";
 
 /*
 * 1 - в файле themeReducer.ts написать нужные типы вместо any, дописать редьюсер
@@ -17,16 +19,24 @@ const themes = [
     {id: 3, value: 'dark'},
 ]
 
+// export type ThemeType = {
+//     id: number
+//     value: string
+// }
+
 const HW12 = () => {
     // взять ид темы из редакса
-    const [themeId, dispatchTheme] = useReducer(themeReducer, {themeId: 1} )
+    // const tasks = useSelector<RootState, TasksState>(state => state.tasks)
+const themeId = useSelector<RootState, any>(state => state.theme)
+    const dispatch = useDispatch()
+
 
     const change = (id: number) => { // дописать функцию
 
-        dispatchTheme(changeThemeId(id))
-        console.log(themeId)
-    }
+        dispatch(changeThemeId(id))
 
+    }
+    console.log(themeId)
     useEffect(() => {
         document.documentElement.dataset.theme = themeId.themeId + ''
     }, [themeId])

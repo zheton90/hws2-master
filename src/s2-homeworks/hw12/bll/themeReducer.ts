@@ -1,5 +1,5 @@
 
-type IniteStateType = {
+export type IniteStateType = {
     themeId: number;
 }
 

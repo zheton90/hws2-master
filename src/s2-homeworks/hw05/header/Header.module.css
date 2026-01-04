@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #FFFFFF;
+    /*background-color: #FFFFFF;*/
 }
 
 .header h1 {

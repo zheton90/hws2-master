@@ -20,9 +20,9 @@ export const Layout: FC<PropsType> = ({ children }) => {
 
     return (
         <div style={{ display: 'flex', flexDirection: 'column', width: '100vw', height: '100vh' }}>
-            <Sidebar open={open} handleClose={handleClose} />
+            {open && <Sidebar open={open} handleClose={handleClose}/>}
             <Header handleOpen={handleOpen} />
-            <div style={{ backgroundColor: '#D9D9D9' }}>
+            <div >
                 {/*страницы*/}
                 {children}
             </div>
