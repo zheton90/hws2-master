@@ -37,10 +37,33 @@ const HW13 = () => {
                 setCode('Код 200!')
                 setImage(success200)
                 // дописать
+                console.log(res)
+                setInfo(res.data.errorText + res.data.info)
 
             })
             .catch((e) => {
                 // дописать
+                console.log(e)
+                switch (e.response.status) {
+                    case 400:
+                        setCode('Код 400!')
+                        setImage(error400)
+                        // дописать
+                        setInfo(e.response.data.errorText + e.response.data.info)
+                        break;
+                    case 500:
+                        setCode('Код 500!')
+                        setImage(error500)
+                        // дописать
+                        setInfo(e.response.data.errorText + e.response.data.info)
+                        break;
+                    default:
+                        setCode('Error!')
+                        setImage(errorUnknown)
+                        setInfo(e.message + e.name)
+
+                }
+
 
             })
     }
@@ -56,6 +79,7 @@ const HW13 = () => {
                         onClick={send(true)}
                         xType={'secondary'}
                         // дописать
+                        disabled={info === '...loading'}
 
                     >
                         Send true
@@ -74,6 +98,7 @@ const HW13 = () => {
                         onClick={send(undefined)}
                         xType={'secondary'}
                         // дописать
+
 
                     >
                         Send undefined
